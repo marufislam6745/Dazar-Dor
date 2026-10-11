@@ -1,0 +1,32 @@
+
+import Link from 'next/link';
+import React from 'react';
+
+const PriceUp = ({ priceUp }) => {
+    return (
+        <div className='lg:grid grid-cols-3 gap-4'>
+            {
+                priceUp.map((value) => <Link href={`/product/${value.id}`} key={value.id}>
+                    <div className='bg-gray-100 p-3 rounded-2xl mb-2 hover:border-2 border-green-700'>
+                        <div className='flex items-center justify-start gap-2'>
+                            <p className='bg-white py-1.5 px-3 rounded-xl text-2xl'>{value.image}</p>
+                            <div>
+                                <h4 className='font-bold'>{value.nameBn}</h4>
+                                <p className='text-sm text-gray-500'>প্রতি কেজি</p>
+                            </div>
+                        </div>
+                        <div className='flex items-center justify-between mt-3'>
+                            <div>
+                                <p className='text-sm'>আজকের দাম</p>
+                                <p className='font-bold'><span className='text-2xl'>{value.today}</span>  টাকা</p>
+                            </div>
+                            <p className='bg-red-50 text-red-700 py-1 px-2 rounded-xl'>▲ {value.change.pct}</p>
+                        </div>
+                    </div>
+                </Link>)
+            }
+        </div>
+    );
+};
+
+export default PriceUp;
