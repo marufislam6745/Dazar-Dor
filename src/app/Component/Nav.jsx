@@ -7,9 +7,9 @@ import Link from 'next/link';
 
 const Nav = async () => {
 
-    // const date = new Date().toLocaleDateString("bn-BD", {
-    //     dateStyle: "full"
-    // })
+    const date = new Date().toLocaleDateString("bn-BD", {
+        dateStyle: "full"
+    })
 
     const res = await fetch(`https://openapi.programming-hero.com/api/bazardor/categories`, { cache: 'force-cache' })
     const data = await res.json()
@@ -28,18 +28,18 @@ const Nav = async () => {
                             <Image
                                 src="/logo-icon.png"
                                 alt="logo"
-                                width={40}
+                                width={50}
                                 height={80}
-                                className="bg-green-700 p-2 rounded-xl "
+                                className=" p-2 rounded-xl "
                             />
 
                             <div>
-                                <h2 className="text-green-700 text-xl sm:text-1xl md:text-2xl font-bold leading-tight">
+                                <h2 className="text-black text-xl sm:text-1xl md:text-2xl font-bold leading-tight">
                                     বাজার দর
                                 </h2>
-                                {/* <h3 className="text-sm sm:text-sm text-gray-500 mt-1">
+                                <h3 className="text-sm sm:text-sm text-gray-500">
                                     {date}
-                                </h3> */}
+                                </h3>
                             </div>
                         </div>
 
