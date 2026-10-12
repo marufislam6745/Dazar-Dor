@@ -4,7 +4,7 @@ import "react-marquee-text/dist/styles.css"
 
 const Marquee =async () => {
 
-    const res=await fetch(`https://openapi.programming-hero.com/api/bazardor/products`, { cache: 'force-cache' })
+    const res=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`, { cache: 'force-cache' })
     const data=await res.json()
 
     return (

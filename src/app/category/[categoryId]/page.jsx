@@ -4,7 +4,7 @@ import React from 'react';
 
 const Categorypage = async ({ params }) => {
     const { categoryId } = await params
-    const res = await fetch(`https://openapi.programming-hero.com/api/bazardor/products?category=${categoryId}`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products?category=${categoryId}`)
     const data = await res.json()
 
     const category = data[0]

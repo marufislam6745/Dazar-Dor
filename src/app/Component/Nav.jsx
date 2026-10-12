@@ -11,7 +11,7 @@ const Nav = async () => {
         dateStyle: "full"
     })
 
-    const res = await fetch(`https://openapi.programming-hero.com/api/bazardor/categories`, { cache: 'force-cache' })
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`, { cache: 'force-cache' })
     if(!res.ok){
         throw new Error(`HTTP error! status:${res.status}`)
     }
