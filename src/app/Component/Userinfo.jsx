@@ -27,7 +27,7 @@ const Userinfo = () => {
                                 <ul tabIndex={-1} className="absolute right-30 mt-2 z-1 dropdown-content menu bg-white rounded-lg w-50 p-3 shadow-lg">
                                     <li className='font-bold'>{session?.user.name}</li>
                                     <li className='text-xs text-gray-500'>{session?.user.email}</li>
-                                    <li className='text-sm my-2 flex items-center gap-1'><FcNightPortrait /> আমার প্রোফাইল</li>
+                                    <Link href={'../profile'}><li className='text-sm my-2 flex items-center gap-1'><FcNightPortrait /> আমার প্রোফাইল</li></Link>
                                     <li><button onClick={handleSignOut} className='text-red-700 text-sm border border-red-700 py-1 px-3 rounded-lg'>সাইন আউট</button></li>
                                 </ul>
                             )

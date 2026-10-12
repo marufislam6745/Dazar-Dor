@@ -12,6 +12,9 @@ const Nav = async () => {
     })
 
     const res = await fetch(`https://openapi.programming-hero.com/api/bazardor/categories`, { cache: 'force-cache' })
+    if(!res.ok){
+        throw new Error(`HTTP error! status:${res.status}`)
+    }
     const data = await res.json()
 
     return (

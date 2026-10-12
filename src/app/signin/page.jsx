@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
+import toast from "react-hot-toast";
 
 
 
@@ -21,10 +22,12 @@ export default function LoginPage() {
             callbackURL:"/"
         })
         if(data){
-            console.log(data)
+            //console.log(data)
+            toast.success("Sign in Successfully")
         }
         if(error){
-            console.log(error)
+            //console.log(error)
+            toast.error(error.message || "An error occurred")
         }
     };
 

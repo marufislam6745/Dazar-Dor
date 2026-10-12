@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { redirect } from 'next/navigation';
+import toast from "react-hot-toast";
 
 
 
@@ -15,7 +16,7 @@ export default function RegisterPage() {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const user=Object.fromEntries(formData.entries())
-        console.log(user)
+       // console.log(user)
 
 
         const {data,error}=await authClient.signUp.email({
@@ -23,11 +24,13 @@ export default function RegisterPage() {
             callbackURL:"/"
         }) 
         if(data){
-            console.log(data)
+            //console.log(data)
+            toast.success('Your Account Create Successfully')
             redirect("/")
         }
         if(error){
-            console.log(error)
+            //console.log(error)
+            toast.error('error.message || "An error occurred"')
         }
     };
 
