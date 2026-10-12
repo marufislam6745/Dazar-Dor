@@ -3,6 +3,7 @@ import { authClient } from '@/lib/auth-client';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 import { FcNightPortrait } from "react-icons/fc";
 
 
@@ -12,6 +13,7 @@ const Userinfo = () => {
     //console.log(session)
     const handleSignOut = async () => {
         await authClient.signOut()
+        toast.success('সাইন আউট সম্পূর্ণ হয়েছে')
     }
 
     return (

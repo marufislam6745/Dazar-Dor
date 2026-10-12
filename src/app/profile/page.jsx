@@ -1,6 +1,8 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
+import { redirect } from 'next/navigation';
 import React from 'react';
+import toast from 'react-hot-toast';
 
 const Profilepage = () => {
 
@@ -9,16 +11,18 @@ const Profilepage = () => {
     const handleUpdateprofile = async (e) => {
         e.preventDefault()
         const formData = new FormData(e.currentTarget)
-        const userData = Object.fromEntries(formData.entries())
+        const user = Object.fromEntries(formData.entries())
         //console.log(userData)
 
         await authClient.updateUser({
-            ...userData
+            ...user
         })
     }
 
     const handleSignOut = async () => {
         await authClient.signOut()
+        toast.success('সাইন আউট সম্পূর্ণ হয়েছে')
+        redirect('/')
     }
 
     return (

@@ -23,7 +23,7 @@ export default function LoginPage() {
         })
         if(data){
             //console.log(data)
-            toast.success("Sign in Successfully")
+            toast.success("লগইন সম্পূর্ণ হয়েছে ")
         }
         if(error){
             //console.log(error)

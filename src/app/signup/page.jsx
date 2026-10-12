@@ -25,12 +25,12 @@ export default function RegisterPage() {
         }) 
         if(data){
             //console.log(data)
-            toast.success('Your Account Create Successfully')
+            toast.success('আপনার অ্যাকাউন্ট তৈরি  সম্পূর্ণ হয়েছে')
             redirect("/")
         }
         if(error){
             //console.log(error)
-            toast.error('error.message || "An error occurred"')
+            toast.error(error.message || "An error occurred")
         }
     };
 
