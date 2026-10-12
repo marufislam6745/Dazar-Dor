@@ -28,7 +28,7 @@ const page = async ({ params }) => {
 
             <div className='bg-gray-100 p-3 my-6 rounded-2xl flex items-center justify-between'>
                 <div className='flex items-center justify-start'>
-                    <p className='text-5xl'>{data.categoryIcon}</p>
+                    <p className='text-5xl'>{data.image}</p>
                     <div>
                         <h2 className='font-bold text-xl'>{data.nameBn}</h2>
                         <p className='text-sm'>প্রতি কেজি - {data.categoryNameBn}</p>
