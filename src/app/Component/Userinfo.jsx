@@ -3,6 +3,8 @@ import { authClient } from '@/lib/auth-client';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import { FcNightPortrait } from "react-icons/fc";
+
 
 const Userinfo = () => {
     const [show, setShow] = useState(false)
@@ -16,15 +18,17 @@ const Userinfo = () => {
         <div>
             {
                 session?.user ?
-                    <div className="dropdown dropdown-bottom dropdown-end">
+                    <div className="dropdown dropdown-bottom">
                         <div onClick={() => setShow(!show)} tabIndex={0} role="button" className="btn m-1 cursor-pointer">
                             <p>{session?.user.name}</p>
                         </div>
                         {
                             show && (
-                                <ul tabIndex={-1} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                                    <li><a>Item 1</a></li>
-                                    <li><a>Item 2</a></li>
+                                <ul tabIndex={-1} className="absolute right-30 mt-2 z-1 dropdown-content menu bg-white rounded-lg w-50 p-3 shadow-lg">
+                                    <li className='font-bold'>{session?.user.name}</li>
+                                    <li className='text-xs text-gray-500'>{session?.user.email}</li>
+                                    <li className='text-sm my-2 flex items-center gap-1'><FcNightPortrait /> আমার প্রোফাইল</li>
+                                    <li><button onClick={handleSignOut} className='text-red-700 text-sm border border-red-700 py-1 px-3 rounded-lg'>সাইন আউট</button></li>
                                 </ul>
                             )
                         }
