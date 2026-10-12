@@ -1,3 +1,37 @@
+Bazar Dor
+
+Bazar dor is a web application designed to help people in Bangladesh easily check and compare daily market prices of essential commodities. It helps users stay informed about the latest prices of everyday products across different local markets
+
+
+🛠️ Technologies Used
+
+Next.js 
+
+App router(Next.js) 
+
+React.js 
+
+Javascript 
+
+Tailwind CSS 
+
+BetterAuth
+
+
+✨ Key Features
+
+📊 Daily Market Prices — View the minimum and maximum prices of essential commodities.
+
+📍 Market-Based Information — Explore market prices from different local markets across Bangladesh.
+
+🗺️ Division-Wise Filtering — Find market price information based on divisions.
+
+📱 Responsive Design — Enjoy a smooth browsing experience on mobile, tablet, and desktop devices.
+
+🔎 Easy Price Comparison — Quickly compare price ranges to make informed shopping decisions.
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
