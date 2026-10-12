@@ -10,7 +10,7 @@ const Categorypage = async ({ params }) => {
     const category = data[0]
 
     return (
-        <div className='max-w-6xl mx-auto'>
+        <div className='max-w-6xl mx-auto mb-10'>
             <div className='flex items-center justify-start gap-2 bg-gray-100 p-3 rounded-2xl my-5'>
                 <h2 className='text-5xl'>{category.categoryIcon}</h2>
                 <div>

@@ -19,7 +19,7 @@ const Nav = async () => {
 
     return (
         <div>
-            <div className="w-full max-w-300 mx-auto px-4 sm:px-6">
+            <div className="w-full max-w-300 mx-auto px-4 sm:px-6 skeleton">
 
                 {/* Top Header */}
                 <div className="border-b border-gray-200 py-4">

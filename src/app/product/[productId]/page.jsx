@@ -19,7 +19,7 @@ const page = async ({ params }) => {
 
 
     return (
-        <div className='max-w-6xl mx-auto'>
+        <div className='max-w-6xl mx-auto mb-5'>
             <div className='flex items-center justify-start gap-2 text-sm text-gray-600 mt-5'>
                 <Link href={'/'}>হোম</Link>
                 <p>{`> ${data.categoryNameBn} >`}</p>
