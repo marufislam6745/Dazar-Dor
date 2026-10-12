@@ -4,7 +4,7 @@ import React from 'react';
 
 const Notfound = () => {
     return (
-        <div className='text-center my-25'>
+        <div className='text-center mt-20 mb-20'>
             <Image className='bg-gray-100 p-2 rounded-xl mx-auto my-2' src={'/logo-icon.png'} alt='photo' width={50} height={80}></Image>
             <h1 className='text-green-700 text-4xl font-bold my-2'>404</h1>
             <h2 className='text-lg font-bold'>পণ্যটি পাওয়া যায়নি</h2>
